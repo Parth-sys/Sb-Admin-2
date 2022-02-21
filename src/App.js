@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import DashC1 from './DashC1'
+import Cards from "./card"
+import Sidebar from './Sidebar';
+import Chart from './Chart';
+import {Grid} from '@mui/material'
+
+import { Colorbar } from './Colorbar';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Grid>
+
+   <DashC1/>
+    
+   <Sidebar></Sidebar>
+   <div>
+  <h2 style={{marginLeft:"150px", color:'lightgray'}}>Dashboard</h2> 
+  <button style={{backgroundColor:"blueviolet",marginLeft:"1000px"}}>Generate report</button>   
+  </div>
+   <Cards></Cards>
+
+   <Chart></Chart>
+   <Colorbar></Colorbar>
+   
+   </Grid>
   );
 }
 
